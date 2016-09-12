@@ -1,0 +1,317 @@
+@import 'https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans:400,600';
+body {
+	background-color: #D8D8D8;
+}
+
+h1 {
+	font-family: 'Indie Flower', cursive;
+	margin-top: 5px;
+	margin-bottom: 20px;
+    font-family: 'Indie Flower', cursive;
+	font-size: 10vh;
+	font-weight: 400;
+	text-align: center;
+	letter-spacing: 5px;
+	color: #FF5E5B;
+	animation-duration: 3s;
+	animation-name: slidein;
+}
+
+@keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+
+.btn {
+	margin: 4px;
+}
+
+.btn-hot {
+	background-color: #FF5E5B;
+	width: 300px;
+	height: 100px;
+	font-weight: bold;
+	font-size: 50px;
+	margin: 5px;
+	color: #FFFFEA;
+	float: left;
+}
+
+.btn-hot:active {
+	color: #FFFFEA;
+	background-color: #FF5E5B;
+	margin-top: 2px;
+}
+
+#playerSelection {
+	font-family: 'Indie Flower', cursive;
+	text-align: center;
+	width: 25%;
+	margin-top: 200px;
+	float: left;
+}
+
+h3 {
+	font-family: 'Indie Flower', cursive;
+	color:#FF5E5B;
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+	font-family: "Lato", sans-serif;
+}
+
+.popupContainer,
+#gameBoardContainer {
+	font-family: 'Indie Flower', cursive;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+}
+
+.popupContainer {
+	font-family: 'Indie Flower', cursive;
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+	top: -100%;
+}
+
+#content {
+	font-family: 'Indie Flower', cursive;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#gameBoardContainer {
+	flex-grow: 1;
+}
+
+#gameboard {
+	background-color:#FF5E5B;
+	-webkit-box-shadow: 1px 1px 21px 6px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 1px 1px 21px 6px rgba(0, 0, 0, 0.75);
+	box-shadow: 1px 1px 21px 6px rgba(0, 0, 0, 0.75);
+	width: 80vh;
+}
+
+.square {
+	float: left;
+	position: relative;
+	width: 30%;
+	height: 30%;
+	/*padding-bottom: 30%; /* = width for a 1:1 aspect ratio */
+	margin: 1.66%;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	/* align horizontal */
+	align-items: center;
+	/* align vertical */
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+#resetGameBox {
+	flex-direction: column;
+	display: flex;
+}
+
+.X {
+	background-color: #FE621D;
+	font-weight: bold;
+	-webkit-animation: fadein 1s;
+	/* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 1s;
+	/* Firefox < 16 */
+	-ms-animation: fadein 1s;
+	/* Internet Explorer */
+	-o-animation: fadein 1s;
+	/* Opera < 12.1 */
+	animation: fadein 1s;
+}
+
+.X::before {
+	content: "X";
+}
+
+.O {
+	background-color: #00CFC1;
+	font-weight: bold;
+	-webkit-animation: fadein 1s;
+	-moz-animation: fadein 1s;
+	-ms-animation: fadein 1s;
+	-o-animation: fadein 1s;
+	animation: fadein 1s;
+	content: "O";
+}
+
+
+/*generates content in an element */
+
+.O::before {
+	content: "O";
+}
+
+.O,
+.X {
+	font-size: 500%;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+
+
+@-moz-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+
+
+/* Opera < 12.1 */
+
+@-o-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.slideDown {
+	animation: slideDown 2s;
+	animation-fill-mode: forwards;
+}
+
+.slideUp {
+	animation: slideUp 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+	from {
+		top: -100%;
+	}
+	to {
+		top: 0%;
+	}
+}
+
+@keyframes slideUp {
+	from {
+		top: 0%;
+	}
+	to {
+		top: -100%;
+	}
+}
+
+.popUp {
+	font-family: 'Indie Flower', cursive;
+	background: rgba(216, 216, 216, 0.7);
+	padding: 1em 5em;
+	-webkit-border-radius: 5px;
+	-moz-border-radius-: 5px;
+	border-radius: 5px;
+	z-index: 5;
+}
+
+#endOfGameStatement {
+	font-family: 'Indie Flower', cursive;
+	color: #FF5E5B;
+	font-weight: bold;
+}
+
+#reset {
+	font-family: 'Indie Flower', cursive;
+	font-size: 15px;
+	padding: 10px;
+	/*
+ margin:20px;*/
+}
+
+#veil {
+	z-index: 2;
+	overflow: hidden;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: -50%;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+.fadeOut {
+	animation: fadeOut 2s;
+	animation-fill-mode: forwards;
+	/* keeps the animation from resetting after it runs*/
+}
+
+.fadeIn {
+	animation: fadeIn 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.play-again{
+	background-color: #FF5E5B;
+	color: #FFFFEA;
+}
