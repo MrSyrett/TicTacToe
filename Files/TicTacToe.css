@@ -16,6 +16,9 @@ h1 {
 	animation-duration: 3s;
 	animation-name: slidein;
 }
+.CharSelect{
+		font-family: 'Josefin Sans', sans-serif;
+}
 
 @keyframes slidein {
 	from {
@@ -50,7 +53,6 @@ h1 {
 }
 
 #playerSelection {
-	font-family: 'Indie Flower', cursive;
 	text-align: center;
 	width: 25%;
 	margin-top: 200px;
@@ -58,7 +60,7 @@ h1 {
 }
 
 h3 {
-	font-family: 'Indie Flower', cursive;
+	font-family: 'Josefin Sans', sans-serif;
 	color:#FF5E5B;
 	font-weight: bold;
 	font-size: 25px;
@@ -247,7 +249,7 @@ h3 {
 }
 
 .popUp {
-	font-family: 'Indie Flower', cursive;
+	ffont-family: 'Josefin Sans', sans-serif;
 	background: rgba(216, 216, 216, 0.7);
 	padding: 1em 5em;
 	-webkit-border-radius: 5px;
@@ -257,7 +259,7 @@ h3 {
 }
 
 #endOfGameStatement {
-	font-family: 'Indie Flower', cursive;
+	font-family: 'Josefin Sans', sans-serif;
 	color: #FF5E5B;
 	font-weight: bold;
 }
